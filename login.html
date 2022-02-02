@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    </head>
+
+    <body class="grad" style="height: 100vh;">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="Images/SpeedGauge.png" alt="Logo" style="height: 40px; width: 50px;">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="button">
+                        <a href="login.html">Login</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="login-box">
+            <h1>Please Log In</h1>
+            <input type="name" class="input-field" placeholder="Username" id="login-username">
+            <p class="validation" id="login-username-valid"></p>
+            <input type="password" class="input-field" placeholder="Password" id="login-password">
+            <p class="validation" id="login-password-valid"></p>
+            <button type="button" class="btn" onclick="loginValidation()">Login</button>
+            
+        </div>
+
+        <script src="main.js"></script>
+
+        <!--
+                <input type="name" class="input-field" placeholder="Username">
+                <input type="password" class="input-field" placeholder="Password">
+                <button type="button" class="btn">Login</button>
+        -->
+
+    </body>
+</html>
