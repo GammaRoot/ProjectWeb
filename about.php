@@ -20,6 +20,7 @@
                         <li><a href="About.php">About</a></li>
                         <li><a href="services.php">Services</a></li>
                         <li><a href="Contact.php">Contact</a></li>
+                        <li><a href="dashboard.php">Dashboard</a></li>
                     </ul>
                     <div class="button">
                         <a href="register.php">Register</a>
