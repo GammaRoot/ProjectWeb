@@ -10,8 +10,7 @@
 <html>
 
 <head>
-    <title>User registration system using PHP and MySQL</title>
-    <!-- <link rel="stylesheet" type="text/css" href="homepage.css"> -->
+    <title>My Project</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -45,7 +44,7 @@
                             <a href="register.php">Register</a>
                         </div>
                     <?php endif ?>
-    </nav>
+        </nav>
     </div>
 
     
@@ -66,7 +65,7 @@
                 <img src="Images/Mercedes.jpg" alt="">
             </div>
             <div class="slide">
-                <img src="Images/BMV.jpg" alt="">
+                <img src="Images/BMW.jpg" alt="">
             </div>
             <div class="slide">
                 <img src="Images/Audi.jpg" alt="">

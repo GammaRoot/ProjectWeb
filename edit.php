@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Dashboard</title>
+<html>
+<head>
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="edit.css" rel="stylesheet">
+</head>
+<body>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        <link href="css/sb-admin-2.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="dashboard.css">
-    </head>
-    <body id="page-top">
-    <div id="wrapper">
+<div id="wrapper">
 
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://autosell.mk/mk">
 <div class="sidebar-brand-icon rotate-n-15">
 <i class="fas fa-laugh-wink"></i>
 </div>
@@ -37,11 +36,12 @@
 <i class="fas fa-fw fa-table"></i>
 <span>Users</span></a>
 </li>
+
 <li class="nav-item">
 <a class="nav-link" href="posts.php">
 <i class="fas fa-fw fa-table"></i>
-<span>Posts</span></a>
-</li>
+<span>Posts</span>
+</a>
 </li>
 
 <hr class="sidebar-divider d-none d-md-block">
@@ -51,6 +51,7 @@
 </div>
 
 </ul>
+
 
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -113,8 +114,49 @@ Logout
 
 <div class="container-fluid">
 
-<div class="row">
 
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Create New User</h6>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Role</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Role</th>
+<th>Actions</th>
+ </tr>
+</tfoot>
+<tbody>
+<tr>
+<form action="https://autosell.mk/mk/dashboard/users/1/update" method="POST"></form>
+<input type="hidden" name="_token" value="J8aurw5MbV1YmwdMlebBpaygT5Ysi7YybTf4qDGH"> <input type="hidden" name="_method" value="PUT"> <td><input value="Superadmin" style="width:100%;" type="text" name="name" disabled=""></td>
+<td><input value="superadmin@autosell.com" style="width:100%;" type="email" name="email" disabled=""></td>
+<td><select style="width:100%;" name="role" id="role" required="">
+<option disabled="" selected="">superadmin</option>
+<option value="administrator">administrator</option>
+<option value="company">company</option>
+<option value="user">user</option>
+<option value="superadmin">superadmin</option>
+</select></td>
+<td><input type="submit" class="btn btn-info" value="Update"></td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -128,12 +170,14 @@ Logout
 </div>
 </footer>
 
+</div>
+
+</div>
+
 <script src="jquery/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="jquery-easing/jquery.easing.min.js"></script>
 <script src="js/sb-admin-2.min.js"></script>
 
-</div>
-</div>
 </body>
 </html>

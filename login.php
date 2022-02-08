@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User registration system using PHP and MySQL</title>
+	<title>Login</title>
     <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
