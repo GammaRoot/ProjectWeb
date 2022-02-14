@@ -1,3 +1,5 @@
+<?php include('navbar.php') ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,33 +11,7 @@
 
     <body class="grad">
 
-        <div class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="Images/SpeedGauge.png" alt="Logo" style="height: 40px; width: 50px;">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="About.php">About</a></li>
-                        <li><a href="services.php">Services</a></li>
-                        <li><a href="Contact.php">Contact</a></li>
-                        <li><a href="dashboard.php">Dashboard</a></li>
-                    </ul>
-                    <div class="button">
-                        <a href="register.php">Register</a>
-                    <div class="button">
-                        <a href="login.php">Login</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <!-- 
-        <div class="image">
-            <img src="Images/Benz.jpg" >
-        </div>
-         -->
+      
 
         <div class="benz">
             <h1>Origins of the Automobile</h1>

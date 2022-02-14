@@ -265,6 +265,7 @@ body {
 img {
     vertical-align: middle;
     border-style: none;
+    height: 50px;
 }
 
 .navbar-expand .navbar-nav .dropdown-menu {

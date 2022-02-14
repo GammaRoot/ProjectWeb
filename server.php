@@ -34,8 +34,8 @@ if(isset($_POST['register'])) {
     // if there are no errors, save user to database
     if(count($errors) == 0) {
         $password = md5($password_1); //encrypt password before storing in database (security)
-        $sql = "INSERT INTO user (username, email, password)
-                 VALUES ('$username', '$email', '$password')";
+        $sql = "INSERT INTO user (username, email, password, role)
+                 VALUES ('$username', '$email', '$password', 'user')";
         mysqli_query($db, $sql);
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
@@ -63,8 +63,13 @@ if(isset($_POST['login'])) {
 
         if(mysqli_num_rows($result) == 1) {
             //log user in
+           
+
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
+            while($row = $result->fetch_assoc()) {
+                $_SESSION['role'] = $row["role"];
+            }
             header('location: index.php'); // redirect to homepage
         } else {
             array_push($errors, "wrong username/password combination");

@@ -43,6 +43,7 @@ nav ul li a {
 	padding: 6px 12px;
 	border-radius: 5px;
 	font-size: 17px;
+	margin-left: 5px;
 }
 
 .navbar .button a:hover {
@@ -56,10 +57,14 @@ nav ul li a {
 }
 
 .button {
+	display: flex;
 	position: absolute;
 	right:50px;
 }
 
+.button p{
+	margin-left: 5px;
+}
 .grad {
 	background-image: linear-gradient(rgb(255, 255, 255), rgb(107, 106, 106));
   }

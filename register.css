@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -12,7 +16,7 @@ body{
     width: 30%;
     margin: 50px auto 0px;
     color: white;
-    background: #5F9EA0;
+    background: #0653ac;
     text-align: center;
     border: 1px solid #B0C4DE;
     border-bottom: none;
@@ -37,10 +41,11 @@ form, .content{
     display: block;
     text-align: left;
     margin: 3px;
+    color: #000;
 }
 
 .input-group input{
-    height: 30px;
+    height: 40px;
     width: 93%;
     padding: 5px 10px;
     font-size: 16px;
@@ -48,11 +53,14 @@ form, .content{
     border: 1px solid gray;
 }
 
+p{
+    color: #000;
+}
 .btn{
     padding: 10px;
     font-size: 15px;
     color: white;
-    background: #5F9EA0;
+    background: #0653ac;
     border: none;
     border-radius: 5px;
 }
@@ -69,8 +77,9 @@ form, .content{
 }
 
 .success{
-    color: #3c763d;
+    color: #0653ac;
     background: #dff0d8;
-    border: 1px solid #3c763d;
+    border: 1px solid #0653ac;
     margin-bottom: 20px;
 }
+

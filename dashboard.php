@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include('server.php');
+?>
+
+<?php if (isset($_SESSION["role"]) && $_SESSION["role"] === "admin") : ?>
+    <!DOCTYPE html>
+    <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <title>Dashboard</title>
@@ -9,131 +14,124 @@
         <link href="css/sb-admin-2.min.css" rel="stylesheet">
         <link rel="stylesheet" href="dashboard.css">
     </head>
+
     <body id="page-top">
-    <div id="wrapper">
+        <div id="wrapper">
 
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-<div class="sidebar-brand-icon rotate-n-15">
-<i class="fas fa-laugh-wink"></i>
-</div>
-<div class="sidebar-brand-text mx-3">AutoSell</div>
-</a>
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Project Web</div>
+                </a>
 
-<hr class="sidebar-divider my-0">
+                <hr class="sidebar-divider my-0">
 
-<li class="nav-item active">
-<a class="nav-link" href="dashboard.php">
-<i class="fas fa-fw fa-tachometer-alt"></i>
-<span>Dashboard</span></a>
-</li>
-
-<hr class="sidebar-divider">
-
-
-<li class="nav-item">
-<a class="nav-link" href="users.php">
-<i class="fas fa-fw fa-table"></i>
-<span>Users</span></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="posts.php">
-<i class="fas fa-fw fa-table"></i>
-<span>Posts</span></a>
-</li>
-</li>
-
-<hr class="sidebar-divider d-none d-md-block">
-
-<div class="text-center d-none d-md-inline">
-<button class="rounded-circle border-0" id="sidebarToggle"></button>
-</div>
-
-</ul>
-
-<div id="content-wrapper" class="d-flex flex-column">
-
-<div id="content">
-
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-<i class="fa fa-bars"></i>
-</button>
+                <li class="nav-item active">
+                    <a class="nav-link" href="dashboard.php">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <hr class="sidebar-divider">
 
 
-<ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="users.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Users</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="posts.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Posts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-form.php">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Contact form</span></a>
+                </li>
+                </li>
 
-<li class="nav-item dropdown no-arrow d-sm-none">
-<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<i class="fas fa-search fa-fw"></i>
-</a>
+                <hr class="sidebar-divider d-none d-md-block">
 
-<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-<form class="form-inline mr-auto w-100 navbar-search">
-<div class="input-group">
-<input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-<div class="input-group-append">
-<button class="btn btn-primary" type="button">
-<i class="fas fa-search fa-sm"></i>
-</button>
-</div>
-</div>
-</form>
-</div>
-</li>
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
 
-<div class="topbar-divider d-none d-sm-block"></div>
+            </ul>
 
-<li class="nav-item dropdown no-arrow">
-<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<span class="mr-2 d-none d-lg-inline text-gray-600 small">Superadmin</span>
-<img style="width: 50px; height: 50px; object-fit: cover;" class="circle" src="Images/undraw_profile_2.svg">
-</a>
+            <div id="content-wrapper" class="d-flex flex-column">
 
-<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-<a class="dropdown-item" href="#">
-<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-Profile
-</a>
-<a class="dropdown-item" href="#">
-<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-Settings
-</a>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-Logout
-</a>
-</div>
-</li>
-</ul>
-</nav>
+                <div id="content">
 
-<div class="container-fluid">
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-<div class="row">
-
-</div>
-</div>
-</div>
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
 
 
-<footer class="sticky-footer bg-white">
-<div class="container my-auto">
-<div class="copyright text-center my-auto">
-<span>Copyright © Autosell 2021</span>
-</div>
-</div>
-</footer>
+                        <ul class="navbar-nav ml-auto">
 
-<script src="jquery/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="jquery-easing/jquery.easing.min.js"></script>
-<script src="js/sb-admin-2.min.js"></script>
+                            <li class="nav-item dropdown no-arrow d-sm-none">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
 
-</div>
-</div>
-</body>
-</html>
+                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto w-100 navbar-search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['username']; ?></span>
+                                    <img style="width: 50px; height: 50px; object-fit: cover;" class="circle" src="Images/undraw_profile_2.svg">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            Welcome <?php echo $_SESSION['username']; ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright © ProjectWeb 2021</span>
+                        </div>
+                    </div>
+                </footer>
+
+                <script src="jquery/jquery.min.js"></script>
+                <script src="js/bootstrap.bundle.min.js"></script>
+                <script src="jquery-easing/jquery.easing.min.js"></script>
+                <script src="js/sb-admin-2.min.js"></script>
+
+            </div>
+        </div>
+    </body>
+
+    </html>
+<?php else : ?>
+    <?php header('location: index.php'); ?>
+<?php endif ?>
